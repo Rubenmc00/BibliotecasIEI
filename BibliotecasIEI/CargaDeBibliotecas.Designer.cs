@@ -72,6 +72,9 @@ namespace BibliotecasIEI
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button4 = new System.Windows.Forms.Button();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textoPruebaMapa = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.modelDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaBindingNavigator)).BeginInit();
@@ -188,6 +191,7 @@ namespace BibliotecasIEI
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -256,7 +260,7 @@ namespace BibliotecasIEI
             this.dataGridViewTextBoxColumn9});
             this.bibliotecaDataGridView.DataSource = this.bibliotecaBindingSource;
             this.bibliotecaDataGridView.Location = new System.Drawing.Point(11, 29);
-            this.bibliotecaDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bibliotecaDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.bibliotecaDataGridView.Name = "bibliotecaDataGridView";
             this.bibliotecaDataGridView.RowHeadersWidth = 51;
             this.bibliotecaDataGridView.RowTemplate.Height = 24;
@@ -338,7 +342,7 @@ namespace BibliotecasIEI
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(475, 374);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 23);
             this.button2.TabIndex = 3;
@@ -349,7 +353,7 @@ namespace BibliotecasIEI
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(638, 374);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(109, 23);
             this.button3.TabIndex = 4;
@@ -384,7 +388,7 @@ namespace BibliotecasIEI
             this.dataGridViewTextBoxColumn11});
             this.localidadDataGridView.DataSource = this.localidadBindingSource;
             this.localidadDataGridView.Location = new System.Drawing.Point(11, 219);
-            this.localidadDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.localidadDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.localidadDataGridView.Name = "localidadDataGridView";
             this.localidadDataGridView.RowHeadersWidth = 51;
             this.localidadDataGridView.RowTemplate.Height = 24;
@@ -416,7 +420,7 @@ namespace BibliotecasIEI
             this.dataGridViewTextBoxColumn14});
             this.provinciaDataGridView.DataSource = this.provinciaBindingSource;
             this.provinciaDataGridView.Location = new System.Drawing.Point(603, 219);
-            this.provinciaDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.provinciaDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.provinciaDataGridView.Name = "provinciaDataGridView";
             this.provinciaDataGridView.RowHeadersWidth = 51;
             this.provinciaDataGridView.RowTemplate.Height = 24;
@@ -449,11 +453,39 @@ namespace BibliotecasIEI
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(794, 374);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(265, 154);
+            this.webBrowser1.TabIndex = 8;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(677, 483);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // textoPruebaMapa
+            // 
+            this.textoPruebaMapa.Location = new System.Drawing.Point(677, 435);
+            this.textoPruebaMapa.Name = "textoPruebaMapa";
+            this.textoPruebaMapa.Size = new System.Drawing.Size(100, 20);
+            this.textoPruebaMapa.TabIndex = 10;
+            // 
             // CargaDeBibliotecas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 540);
+            this.Controls.Add(this.textoPruebaMapa);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.provinciaDataGridView);
             this.Controls.Add(this.localidadDataGridView);
             this.Controls.Add(this.button4);
@@ -525,5 +557,8 @@ namespace BibliotecasIEI
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textoPruebaMapa;
     }
 }

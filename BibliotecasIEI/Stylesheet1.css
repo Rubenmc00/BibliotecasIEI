@@ -1,0 +1,11 @@
+﻿*{
+    box-sizing: border-box
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.map{
+    height: 400px;
+    width: 100%;
+}

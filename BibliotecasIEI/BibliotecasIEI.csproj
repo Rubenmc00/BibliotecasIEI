@@ -294,6 +294,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="v6.12.0-dist\ol.css.map" />
+    <None Include="v6.12.0-dist\ol.js.map" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -310,7 +312,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>BaseDeDatos.mdf</DependentUpon>
     </Content>
+    <Content Include="HTMLPage1.html" />
+    <Content Include="JavaScript1.js" />
     <Content Include="Readme.txt" />
+    <Content Include="Stylesheet1.css" />
+    <Content Include="v6.12.0-dist\ol.css" />
+    <Content Include="v6.12.0-dist\ol.js" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

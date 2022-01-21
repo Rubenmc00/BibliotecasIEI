@@ -18,6 +18,7 @@ using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
 using System.Threading;
 using System.Data.SqlClient;
+using System.Text;
 
 namespace BibliotecasIEI
 {
@@ -402,6 +403,11 @@ namespace BibliotecasIEI
 
 
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var map = new ol.Map({ })
         }
     }
 
