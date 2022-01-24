@@ -407,7 +407,10 @@ namespace BibliotecasIEI
 
         private void button5_Click(object sender, EventArgs e)
         {
-            var map = new ol.Map({ })
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
         }
     }
 
