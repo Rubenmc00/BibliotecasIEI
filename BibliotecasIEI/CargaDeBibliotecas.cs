@@ -20,6 +20,17 @@ using System.Threading;
 using System.Data.SqlClient;
 using System.Text;
 
+using System.IO;
+using System.Reflection;
+using System.Diagnostics;
+using Microsoft.JSInterop;
+
+using GMap.NET;
+using GMap.NET.MapProviders;
+using GMap.NET.WindowsForms;
+using GMap.NET.WindowsForms.Markers;
+
+
 namespace BibliotecasIEI
 {
     public partial class CargaDeBibliotecas : Form
@@ -30,8 +41,10 @@ namespace BibliotecasIEI
         public CargaDeBibliotecas()
         {
             InitializeComponent();
-
+           
         }
+
+       
 
         private void bibliotecaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -407,11 +420,40 @@ namespace BibliotecasIEI
 
         private void button5_Click(object sender, EventArgs e)
         {
+            // string filename = "C:/Users/Ruben/Desktop/entrega/ru/BibliotecasIEI/BibliotecasIEI/HTMLPage1.html";
+
+            //File.WriteAllText(filename, "<h1>Hello</h1>");
+
+            // Process.Start(filename);
+
+            gMapControl1.DragButton = MouseButtons.Left;
+            gMapControl1.CanDragMap = true;
+            gMapControl1.MapProvider = GMapProviders.GoogleMap;
+            gMapControl1.Position = new PointLatLng(20.968813213906,-89.6250915527344);
+            gMapControl1.MinZoom = 0;
+            gMapControl1.MaxZoom = 24;
+            gMapControl1.Zoom = 9;
+            gMapControl1.AutoScroll = true;
+                
+           
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
+            //webBrowser1.Navigate("C:/Users/Ruben/Desktop/entrega/ru/BibliotecasIEI/BibliotecasIEI/HTMLPage1.html");
         }
+
+        private void nn(object sender, ControlEventArgs e)
+        {
+
+           // webBrowser1.Navigate("C:/Users/Ruben/Desktop/entrega/ru/BibliotecasIEI/BibliotecasIEI/HTMLPage1.html");
+
+
+            /*FileStream source = new FileStream("C:/Users/Ruben/Desktop/entrega/ru/BibliotecasIEI/BibliotecasIEI/HTMLPage1.html", FileMode.Open, FileAccess.Read);
+            webBrowser1.DocumentStream = source;*/
+        }
+
+        
     }
 
 }

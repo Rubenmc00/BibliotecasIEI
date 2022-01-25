@@ -18,7 +18,6 @@ function init() {
     map.on('click', function (e){
         console.log(e.coordinate);
     })
-
     var layer = new ol.layer.Vector({
         source: new ol.source.Vector({
             features: [new ol.Feature({

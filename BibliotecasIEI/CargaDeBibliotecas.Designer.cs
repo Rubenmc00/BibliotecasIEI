@@ -75,6 +75,7 @@ namespace BibliotecasIEI
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.button5 = new System.Windows.Forms.Button();
             this.textoPruebaMapa = new System.Windows.Forms.TextBox();
+            this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
             ((System.ComponentModel.ISupportInitialize)(this.modelDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaBindingNavigator)).BeginInit();
@@ -460,7 +461,9 @@ namespace BibliotecasIEI
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(265, 154);
             this.webBrowser1.TabIndex = 8;
+            this.webBrowser1.Url = new System.Uri("", System.UriKind.Relative);
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
+            this.webBrowser1.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.nn);
             // 
             // button5
             // 
@@ -479,11 +482,38 @@ namespace BibliotecasIEI
             this.textoPruebaMapa.Size = new System.Drawing.Size(100, 20);
             this.textoPruebaMapa.TabIndex = 10;
             // 
+            // gMapControl1
+            // 
+            this.gMapControl1.Bearing = 0F;
+            this.gMapControl1.CanDragMap = true;
+            this.gMapControl1.EmptyTileColor = System.Drawing.Color.Navy;
+            this.gMapControl1.GrayScaleMode = false;
+            this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            this.gMapControl1.LevelsKeepInMemmory = 5;
+            this.gMapControl1.Location = new System.Drawing.Point(12, 374);
+            this.gMapControl1.MarkersEnabled = true;
+            this.gMapControl1.MaxZoom = 2;
+            this.gMapControl1.MinZoom = 2;
+            this.gMapControl1.MouseWheelZoomEnabled = true;
+            this.gMapControl1.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.gMapControl1.Name = "gMapControl1";
+            this.gMapControl1.NegativeMode = false;
+            this.gMapControl1.PolygonsEnabled = true;
+            this.gMapControl1.RetryLoadTile = 0;
+            this.gMapControl1.RoutesEnabled = true;
+            this.gMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.gMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.gMapControl1.ShowTileGridLines = false;
+            this.gMapControl1.Size = new System.Drawing.Size(281, 154);
+            this.gMapControl1.TabIndex = 11;
+            this.gMapControl1.Zoom = 0D;
+            // 
             // CargaDeBibliotecas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 540);
+            this.Controls.Add(this.gMapControl1);
             this.Controls.Add(this.textoPruebaMapa);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.webBrowser1);
@@ -561,5 +591,6 @@ namespace BibliotecasIEI
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textoPruebaMapa;
+        private GMap.NET.WindowsForms.GMapControl gMapControl1;
     }
 }
