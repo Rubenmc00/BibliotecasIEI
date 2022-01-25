@@ -41,13 +41,13 @@ namespace BibliotecasIEI
         {
             InitializeComponent();
             gMapControl1.DragButton = MouseButtons.Left;
-            gMapControl1.CanDragMap = true;
+            //gMapControl1.CanDragMap = true;
             gMapControl1.MapProvider = GMapProviders.GoogleMap;
             gMapControl1.Position = new PointLatLng(40.4167, -3.70325);
             gMapControl1.MinZoom = 0;
             gMapControl1.MaxZoom = 24;
             gMapControl1.Zoom = 4;
-            gMapControl1.AutoScroll = true;
+            //gMapControl1.AutoScroll = true;
 
 
         }
@@ -182,15 +182,21 @@ namespace BibliotecasIEI
 
                         double longi = Convert.ToDouble(eusList[i].lonwgs84);
                         double lat = Convert.ToDouble(eusList[i].latwgs84);
-                        GMapOverlay markerOverlay = new GMapOverlay("Marcador");
-                        GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(lat, longi), GMarkerGoogleType.green);
-                        markerOverlay.Markers.Add(marker);
+                        /* GMapOverlay markerOverlay = new GMapOverlay("Marcador");
+                         GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(43.368861, -2.70106), GMarkerGoogleType.green);
+                         markerOverlay.Markers.Add(marker);
 
-                        marker.ToolTipMode = MarkerTooltipMode.Always;
-                        marker.ToolTipText = string.Format(eusList[i].address);
+                         marker.ToolTipMode = MarkerTooltipMode.Always;
+                         marker.ToolTipText = string.Format(eusList[i].address);
 
-                        gMapControl1.Overlays.Add(markerOverlay);
+                         gMapControl1.Overlays.Add(markerOverlay);*/
 
+                        PointLatLng point = new PointLatLng(lat, longi);
+                        GMapMarker marker = new GMarkerGoogle(point, GMarkerGoogleType.red_pushpin);
+
+                        GMapOverlay markers = new GMapOverlay("marker");
+                        markers.Markers.Add(marker);
+                        gMapControl1.Overlays.Add(markers);
 
                     }
                     catch (Exception err)
