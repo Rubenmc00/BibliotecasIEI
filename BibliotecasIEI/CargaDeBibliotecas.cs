@@ -428,10 +428,10 @@ namespace BibliotecasIEI
             gMapControl1.DragButton = MouseButtons.Left;
             gMapControl1.CanDragMap = true;
             gMapControl1.MapProvider = GMapProviders.GoogleMap;
-            gMapControl1.Position = new PointLatLng(20.968813213906,-89.6250915527344);
+            gMapControl1.Position = new PointLatLng(40.4167, -3.70325);
             gMapControl1.MinZoom = 0;
             gMapControl1.MaxZoom = 24;
-            gMapControl1.Zoom = 9;
+            gMapControl1.Zoom = 4;
             gMapControl1.AutoScroll = true;
                 
            
