@@ -19,7 +19,6 @@ using OpenQA.Selenium;
 using System.Threading;
 using System.Data.SqlClient;
 using System.Text;
-
 using System.IO;
 using System.Reflection;
 using System.Diagnostics;
