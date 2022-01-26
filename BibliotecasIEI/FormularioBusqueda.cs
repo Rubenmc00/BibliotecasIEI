@@ -48,6 +48,7 @@ namespace BibliotecasIEI
             markers.Clear();
 
             String codMun = "";
+            textoResultado.Text = "";
 
             foreach (DataRow row in this.localidadTableAdapter.GetData().Rows)
             { 
@@ -71,14 +72,23 @@ namespace BibliotecasIEI
                         gMapControl1.Overlays.Add(markers);
                         marker.ToolTipMode = MarkerTooltipMode.Always;
                         marker.ToolTipText = string.Format(row.ItemArray[0].ToString());
+                
+                        textoResultado.Text += row.ItemArray[0].ToString() + " en " +
+                            row.ItemArray[3].ToString() + ". Descripción: " + row.ItemArray[8] +
+                            ". Email: " + row.ItemArray[2].ToString() + "  Tlf: " + row.ItemArray[1].ToString() + "\n";
                     }
 
                 }             
             }
             if (markers.Markers.Count == 0)
             {
-                System.Diagnostics.Debug.WriteLine("No se han encontrado resultados.");
+                textoResultado.Text = "No se han encontrado resultados asociados a esta búsqueda.";
             }
+        }
+
+        private void textoResultado_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

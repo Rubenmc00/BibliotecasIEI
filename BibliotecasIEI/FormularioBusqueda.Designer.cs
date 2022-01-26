@@ -44,6 +44,9 @@ namespace BibliotecasIEI
             this.botonCancelar = new System.Windows.Forms.Button();
             this.localidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.localidadTableAdapter = new BibliotecasIEI.ModelDataSetTableAdapters.LocalidadTableAdapter();
+            this.resultadosLabel = new System.Windows.Forms.Label();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.textoResultado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.modelDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.localidadBindingSource)).BeginInit();
@@ -79,7 +82,7 @@ namespace BibliotecasIEI
             this.gMapControl1.GrayScaleMode = false;
             this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMapControl1.LevelsKeepInMemmory = 5;
-            this.gMapControl1.Location = new System.Drawing.Point(452, 111);
+            this.gMapControl1.Location = new System.Drawing.Point(521, 120);
             this.gMapControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gMapControl1.MarkersEnabled = true;
             this.gMapControl1.MaxZoom = 2;
@@ -94,7 +97,7 @@ namespace BibliotecasIEI
             this.gMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMapControl1.ShowTileGridLines = false;
-            this.gMapControl1.Size = new System.Drawing.Size(557, 344);
+            this.gMapControl1.Size = new System.Drawing.Size(517, 255);
             this.gMapControl1.TabIndex = 12;
             this.gMapControl1.Zoom = 0D;
             // 
@@ -174,11 +177,35 @@ namespace BibliotecasIEI
             // 
             this.localidadTableAdapter.ClearBeforeFill = true;
             // 
+            // resultadosLabel
+            // 
+            this.resultadosLabel.AutoSize = true;
+            this.resultadosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultadosLabel.Location = new System.Drawing.Point(79, 390);
+            this.resultadosLabel.Name = "resultadosLabel";
+            this.resultadosLabel.Size = new System.Drawing.Size(234, 25);
+            this.resultadosLabel.TabIndex = 20;
+            this.resultadosLabel.Text = "Resultados de búsqueda:";
+            // 
+            // textoResultado
+            // 
+            this.textoResultado.AllowDrop = true;
+            this.textoResultado.AutoEllipsis = true;
+            this.textoResultado.AutoSize = true;
+            this.textoResultado.Location = new System.Drawing.Point(81, 437);
+            this.textoResultado.Name = "textoResultado";
+            this.textoResultado.Size = new System.Drawing.Size(325, 17);
+            this.textoResultado.TabIndex = 21;
+            this.textoResultado.Text = "Aquí se mostrarán los resultados de su búsqueda.";
+            this.textoResultado.Click += new System.EventHandler(this.textoResultado_Click);
+            // 
             // FormularioBusqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 468);
+            this.ClientSize = new System.Drawing.Size(1112, 720);
+            this.Controls.Add(this.textoResultado);
+            this.Controls.Add(this.resultadosLabel);
             this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.botonBuscar);
             this.Controls.Add(this.textoLocalidad);
@@ -213,5 +240,8 @@ namespace BibliotecasIEI
         private System.Windows.Forms.Button botonCancelar;
         private System.Windows.Forms.BindingSource localidadBindingSource;
         private ModelDataSetTableAdapters.LocalidadTableAdapter localidadTableAdapter;
+        private System.Windows.Forms.Label resultadosLabel;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Label textoResultado;
     }
 }
