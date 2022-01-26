@@ -291,6 +291,15 @@
     <Compile Include="CargaDeBibliotecas.Designer.cs">
       <DependentUpon>CargaDeBibliotecas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioBusqueda.Designer.cs">
+      <DependentUpon>FormularioBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDataSet.cs">
+      <DependentUpon>ModelDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ModelDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -307,6 +316,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CargaDeBibliotecas.resx">
       <DependentUpon>CargaDeBibliotecas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioBusqueda.resx">
+      <DependentUpon>FormularioBusqueda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

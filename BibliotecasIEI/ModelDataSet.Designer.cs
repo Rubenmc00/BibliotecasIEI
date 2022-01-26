@@ -367,6 +367,8 @@ namespace BibliotecasIEI {
             
             private global::System.Data.DataColumn columndescripcion;
             
+            private global::System.Data.DataColumn columncodMunicipal;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public BibliotecaDataTable() {
@@ -474,6 +476,14 @@ namespace BibliotecasIEI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn codMunicipalColumn {
+                get {
+                    return this.columncodMunicipal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -509,7 +519,7 @@ namespace BibliotecasIEI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public BibliotecaRow AddBibliotecaRow(string nombre, string telefono, string email, string direccion, string codigoPostal, string longitud, string latitud, string tipo, string descripcion) {
+            public BibliotecaRow AddBibliotecaRow(string nombre, string telefono, string email, string direccion, string codigoPostal, string longitud, string latitud, string tipo, string descripcion, string codMunicipal) {
                 BibliotecaRow rowBibliotecaRow = ((BibliotecaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         nombre,
@@ -520,7 +530,8 @@ namespace BibliotecasIEI {
                         longitud,
                         latitud,
                         tipo,
-                        descripcion};
+                        descripcion,
+                        codMunicipal};
                 rowBibliotecaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBibliotecaRow);
                 return rowBibliotecaRow;
@@ -559,6 +570,7 @@ namespace BibliotecasIEI {
                 this.columnlatitud = base.Columns["latitud"];
                 this.columntipo = base.Columns["tipo"];
                 this.columndescripcion = base.Columns["descripcion"];
+                this.columncodMunicipal = base.Columns["codMunicipal"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -582,6 +594,8 @@ namespace BibliotecasIEI {
                 base.Columns.Add(this.columntipo);
                 this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescripcion);
+                this.columncodMunicipal = new global::System.Data.DataColumn("codMunicipal", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncodMunicipal);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnnombre}, true));
                 this.columnnombre.AllowDBNull = false;
@@ -595,6 +609,7 @@ namespace BibliotecasIEI {
                 this.columnlatitud.MaxLength = 100;
                 this.columntipo.MaxLength = 150;
                 this.columndescripcion.MaxLength = 150;
+                this.columncodMunicipal.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -732,6 +747,8 @@ namespace BibliotecasIEI {
             
             private global::System.Data.DataColumn columnmunicipio;
             
+            private global::System.Data.DataColumn columncodProvincia;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public LocalidadDataTable() {
@@ -783,6 +800,14 @@ namespace BibliotecasIEI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn codProvinciaColumn {
+                get {
+                    return this.columncodProvincia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -818,11 +843,12 @@ namespace BibliotecasIEI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LocalidadRow AddLocalidadRow(string codigoMunicipal, string municipio) {
+            public LocalidadRow AddLocalidadRow(string codigoMunicipal, string municipio, string codProvincia) {
                 LocalidadRow rowLocalidadRow = ((LocalidadRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         codigoMunicipal,
-                        municipio};
+                        municipio,
+                        codProvincia};
                 rowLocalidadRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLocalidadRow);
                 return rowLocalidadRow;
@@ -854,6 +880,7 @@ namespace BibliotecasIEI {
             internal void InitVars() {
                 this.columncodigoMunicipal = base.Columns["codigoMunicipal"];
                 this.columnmunicipio = base.Columns["municipio"];
+                this.columncodProvincia = base.Columns["codProvincia"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -863,12 +890,15 @@ namespace BibliotecasIEI {
                 base.Columns.Add(this.columncodigoMunicipal);
                 this.columnmunicipio = new global::System.Data.DataColumn("municipio", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmunicipio);
+                this.columncodProvincia = new global::System.Data.DataColumn("codProvincia", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncodProvincia);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncodigoMunicipal}, true));
                 this.columncodigoMunicipal.AllowDBNull = false;
                 this.columncodigoMunicipal.Unique = true;
                 this.columncodigoMunicipal.MaxLength = 100;
                 this.columnmunicipio.MaxLength = 100;
+                this.columncodProvincia.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1424,6 +1454,22 @@ namespace BibliotecasIEI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string codMunicipal {
+                get {
+                    try {
+                        return ((string)(this[this.tableBiblioteca.codMunicipalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'codMunicipal\' de la tabla \'Biblioteca\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBiblioteca.codMunicipalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IstelefonoNull() {
                 return this.IsNull(this.tableBiblioteca.telefonoColumn);
             }
@@ -1517,6 +1563,18 @@ namespace BibliotecasIEI {
             public void SetdescripcionNull() {
                 this[this.tableBiblioteca.descripcionColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IscodMunicipalNull() {
+                return this.IsNull(this.tableBiblioteca.codMunicipalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetcodMunicipalNull() {
+                this[this.tableBiblioteca.codMunicipalColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -1562,6 +1620,22 @@ namespace BibliotecasIEI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string codProvincia {
+                get {
+                    try {
+                        return ((string)(this[this.tableLocalidad.codProvinciaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'codProvincia\' de la tabla \'Localidad\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLocalidad.codProvinciaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsmunicipioNull() {
                 return this.IsNull(this.tableLocalidad.municipioColumn);
             }
@@ -1570,6 +1644,18 @@ namespace BibliotecasIEI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetmunicipioNull() {
                 this[this.tableLocalidad.municipioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IscodProvinciaNull() {
+                return this.IsNull(this.tableLocalidad.codProvinciaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetcodProvinciaNull() {
+                this[this.tableLocalidad.codProvinciaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1863,10 +1949,11 @@ namespace BibliotecasIEI.ModelDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("latitud", "latitud");
             tableMapping.ColumnMappings.Add("tipo", "tipo");
             tableMapping.ColumnMappings.Add("descripcion", "descripcion");
+            tableMapping.ColumnMappings.Add("codMunicipal", "codMunicipal");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Biblioteca] WHERE (([nombre] = @Original_nombre) AND ((@IsNull_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)) AND ((@IsNull_direccion = 1 AND [direccion] IS NULL) OR ([direccion] = @Original_direccion)) AND ((@IsNull_codigoPostal = 1 AND [codigoPostal] IS NULL) OR ([codigoPostal] = @Original_codigoPostal)) AND ((@IsNull_longitud = 1 AND [longitud] IS NULL) OR ([longitud] = @Original_longitud)) AND ((@IsNull_latitud = 1 AND [latitud] IS NULL) OR ([latitud] = @Original_latitud)) AND ((@IsNull_tipo = 1 AND [tipo] IS NULL) OR ([tipo] = @Original_tipo)) AND ((@IsNull_descripcion = 1 AND [descripcion] IS NULL) OR ([descripcion] = @Original_descripcion)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Biblioteca] WHERE (([nombre] = @Original_nombre) AND ((@IsNull_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)) AND ((@IsNull_direccion = 1 AND [direccion] IS NULL) OR ([direccion] = @Original_direccion)) AND ((@IsNull_codigoPostal = 1 AND [codigoPostal] IS NULL) OR ([codigoPostal] = @Original_codigoPostal)) AND ((@IsNull_longitud = 1 AND [longitud] IS NULL) OR ([longitud] = @Original_longitud)) AND ((@IsNull_latitud = 1 AND [latitud] IS NULL) OR ([latitud] = @Original_latitud)) AND ((@IsNull_tipo = 1 AND [tipo] IS NULL) OR ([tipo] = @Original_tipo)) AND ((@IsNull_descripcion = 1 AND [descripcion] IS NULL) OR ([descripcion] = @Original_descripcion)) AND ((@IsNull_codMunicipal = 1 AND [codMunicipal] IS NULL) OR ([codMunicipal] = @Original_codMunicipal)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_telefono", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1885,10 +1972,12 @@ namespace BibliotecasIEI.ModelDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tipo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_descripcion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "descripcion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "descripcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_codMunicipal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codMunicipal", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codMunicipal", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codMunicipal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Biblioteca] ([nombre], [telefono], [email], [direccion], [codigoPostal], [longitud], [latitud], [tipo], [descripcion]) VALUES (@nombre, @telefono, @email, @direccion, @codigoPostal, @longitud, @latitud, @tipo, @descripcion);
-SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo, descripcion FROM Biblioteca WHERE (nombre = @nombre)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Biblioteca] ([nombre], [telefono], [email], [direccion], [codigoPostal], [longitud], [latitud], [tipo], [descripcion], [codMunicipal]) VALUES (@nombre, @telefono, @email, @direccion, @codigoPostal, @longitud, @latitud, @tipo, @descripcion, @codMunicipal);
+SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo, descripcion, codMunicipal FROM Biblioteca WHERE (nombre = @nombre)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@telefono", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1899,10 +1988,11 @@ SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@latitud", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "latitud", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codMunicipal", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codMunicipal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Biblioteca] SET [nombre] = @nombre, [telefono] = @telefono, [email] = @email, [direccion] = @direccion, [codigoPostal] = @codigoPostal, [longitud] = @longitud, [latitud] = @latitud, [tipo] = @tipo, [descripcion] = @descripcion WHERE (([nombre] = @Original_nombre) AND ((@IsNull_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)) AND ((@IsNull_direccion = 1 AND [direccion] IS NULL) OR ([direccion] = @Original_direccion)) AND ((@IsNull_codigoPostal = 1 AND [codigoPostal] IS NULL) OR ([codigoPostal] = @Original_codigoPostal)) AND ((@IsNull_longitud = 1 AND [longitud] IS NULL) OR ([longitud] = @Original_longitud)) AND ((@IsNull_latitud = 1 AND [latitud] IS NULL) OR ([latitud] = @Original_latitud)) AND ((@IsNull_tipo = 1 AND [tipo] IS NULL) OR ([tipo] = @Original_tipo)) AND ((@IsNull_descripcion = 1 AND [descripcion] IS NULL) OR ([descripcion] = @Original_descripcion)));
-SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo, descripcion FROM Biblioteca WHERE (nombre = @nombre)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Biblioteca] SET [nombre] = @nombre, [telefono] = @telefono, [email] = @email, [direccion] = @direccion, [codigoPostal] = @codigoPostal, [longitud] = @longitud, [latitud] = @latitud, [tipo] = @tipo, [descripcion] = @descripcion, [codMunicipal] = @codMunicipal WHERE (([nombre] = @Original_nombre) AND ((@IsNull_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)) AND ((@IsNull_direccion = 1 AND [direccion] IS NULL) OR ([direccion] = @Original_direccion)) AND ((@IsNull_codigoPostal = 1 AND [codigoPostal] IS NULL) OR ([codigoPostal] = @Original_codigoPostal)) AND ((@IsNull_longitud = 1 AND [longitud] IS NULL) OR ([longitud] = @Original_longitud)) AND ((@IsNull_latitud = 1 AND [latitud] IS NULL) OR ([latitud] = @Original_latitud)) AND ((@IsNull_tipo = 1 AND [tipo] IS NULL) OR ([tipo] = @Original_tipo)) AND ((@IsNull_descripcion = 1 AND [descripcion] IS NULL) OR ([descripcion] = @Original_descripcion)) AND ((@IsNull_codMunicipal = 1 AND [codMunicipal] IS NULL) OR ([codMunicipal] = @Original_codMunicipal)));
+SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo, descripcion, codMunicipal FROM Biblioteca WHERE (nombre = @nombre)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@telefono", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1913,6 +2003,7 @@ SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@latitud", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "latitud", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codMunicipal", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codMunicipal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_telefono", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_telefono", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -1930,6 +2021,8 @@ SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tipo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_descripcion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "descripcion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "descripcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_codMunicipal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codMunicipal", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codMunicipal", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codMunicipal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1946,7 +2039,7 @@ SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo," +
-                " descripcion FROM dbo.Biblioteca";
+                " descripcion, codMunicipal\r\nFROM     Biblioteca";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2007,7 +2100,7 @@ SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_nombre, string Original_telefono, string Original_email, string Original_direccion, string Original_codigoPostal, string Original_longitud, string Original_latitud, string Original_tipo, string Original_descripcion) {
+        public virtual int Delete(string Original_nombre, string Original_telefono, string Original_email, string Original_direccion, string Original_codigoPostal, string Original_longitud, string Original_latitud, string Original_tipo, string Original_descripcion, string Original_codMunicipal) {
             if ((Original_nombre == null)) {
                 throw new global::System.ArgumentNullException("Original_nombre");
             }
@@ -2078,6 +2171,14 @@ SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_descripcion));
             }
+            if ((Original_codMunicipal == null)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_codMunicipal));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2098,7 +2199,7 @@ SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string nombre, string telefono, string email, string direccion, string codigoPostal, string longitud, string latitud, string tipo, string descripcion) {
+        public virtual int Insert(string nombre, string telefono, string email, string direccion, string codigoPostal, string longitud, string latitud, string tipo, string descripcion, string codMunicipal) {
             if ((nombre == null)) {
                 throw new global::System.ArgumentNullException("nombre");
             }
@@ -2153,6 +2254,12 @@ SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = ((string)(descripcion));
             }
+            if ((codMunicipal == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(codMunicipal));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2183,6 +2290,7 @@ SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo
                     string latitud, 
                     string tipo, 
                     string descripcion, 
+                    string codMunicipal, 
                     string Original_nombre, 
                     string Original_telefono, 
                     string Original_email, 
@@ -2191,7 +2299,8 @@ SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo
                     string Original_longitud, 
                     string Original_latitud, 
                     string Original_tipo, 
-                    string Original_descripcion) {
+                    string Original_descripcion, 
+                    string Original_codMunicipal) {
             if ((nombre == null)) {
                 throw new global::System.ArgumentNullException("nombre");
             }
@@ -2246,75 +2355,89 @@ SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(descripcion));
             }
+            if ((codMunicipal == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(codMunicipal));
+            }
             if ((Original_nombre == null)) {
                 throw new global::System.ArgumentNullException("Original_nombre");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_nombre));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_nombre));
             }
             if ((Original_telefono == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_telefono));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_telefono));
             }
             if ((Original_email == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_email));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_email));
             }
             if ((Original_direccion == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_direccion));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_direccion));
             }
             if ((Original_codigoPostal == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_codigoPostal));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_codigoPostal));
             }
             if ((Original_longitud == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_longitud));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_longitud));
             }
             if ((Original_latitud == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_latitud));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_latitud));
             }
             if ((Original_tipo == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_tipo));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_tipo));
             }
             if ((Original_descripcion == null)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_descripcion));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_descripcion));
+            }
+            if ((Original_codMunicipal == null)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_codMunicipal));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2345,6 +2468,7 @@ SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo
                     string latitud, 
                     string tipo, 
                     string descripcion, 
+                    string codMunicipal, 
                     string Original_nombre, 
                     string Original_telefono, 
                     string Original_email, 
@@ -2353,8 +2477,9 @@ SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo
                     string Original_longitud, 
                     string Original_latitud, 
                     string Original_tipo, 
-                    string Original_descripcion) {
-            return this.Update(Original_nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo, descripcion, Original_nombre, Original_telefono, Original_email, Original_direccion, Original_codigoPostal, Original_longitud, Original_latitud, Original_tipo, Original_descripcion);
+                    string Original_descripcion, 
+                    string Original_codMunicipal) {
+            return this.Update(Original_nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo, descripcion, codMunicipal, Original_nombre, Original_telefono, Original_email, Original_direccion, Original_codigoPostal, Original_longitud, Original_latitud, Original_tipo, Original_descripcion, Original_codMunicipal);
         }
     }
     
@@ -2481,34 +2606,39 @@ SELECT nombre, telefono, email, direccion, codigoPostal, longitud, latitud, tipo
             tableMapping.DataSetTable = "Localidad";
             tableMapping.ColumnMappings.Add("codigoMunicipal", "codigoMunicipal");
             tableMapping.ColumnMappings.Add("municipio", "municipio");
+            tableMapping.ColumnMappings.Add("codProvincia", "codProvincia");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Localidad] WHERE (([codigoMunicipal] = @Original_codigoMunicip" +
-                "al) AND ((@IsNull_municipio = 1 AND [municipio] IS NULL) OR ([municipio] = @Orig" +
-                "inal_municipio)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Localidad] WHERE (([codigoMunicipal] = @Original_codigoMunicipal) AND ((@IsNull_municipio = 1 AND [municipio] IS NULL) OR ([municipio] = @Original_municipio)) AND ((@IsNull_codProvincia = 1 AND [codProvincia] IS NULL) OR ([codProvincia] = @Original_codProvincia)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codigoMunicipal", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigoMunicipal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_municipio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "municipio", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_municipio", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "municipio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_codProvincia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codProvincia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codProvincia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codProvincia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Localidad] ([codigoMunicipal], [municipio]) VALUES (@codigoMun" +
-                "icipal, @municipio);\r\nSELECT codigoMunicipal, municipio FROM Localidad WHERE (co" +
-                "digoMunicipal = @codigoMunicipal)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Localidad] ([codigoMunicipal], [municipio], [codProvincia]) VALUES (" +
+                "@codigoMunicipal, @municipio, @codProvincia);\r\nSELECT codigoMunicipal, municipio" +
+                ", codProvincia FROM Localidad WHERE (codigoMunicipal = @codigoMunicipal)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigoMunicipal", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigoMunicipal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@municipio", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "municipio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codProvincia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codProvincia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Localidad] SET [codigoMunicipal] = @codigoMunicipal, [municipio] = @municipio WHERE (([codigoMunicipal] = @Original_codigoMunicipal) AND ((@IsNull_municipio = 1 AND [municipio] IS NULL) OR ([municipio] = @Original_municipio)));
-SELECT codigoMunicipal, municipio FROM Localidad WHERE (codigoMunicipal = @codigoMunicipal)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Localidad] SET [codigoMunicipal] = @codigoMunicipal, [municipio] = @municipio, [codProvincia] = @codProvincia WHERE (([codigoMunicipal] = @Original_codigoMunicipal) AND ((@IsNull_municipio = 1 AND [municipio] IS NULL) OR ([municipio] = @Original_municipio)) AND ((@IsNull_codProvincia = 1 AND [codProvincia] IS NULL) OR ([codProvincia] = @Original_codProvincia)));
+SELECT codigoMunicipal, municipio, codProvincia FROM Localidad WHERE (codigoMunicipal = @codigoMunicipal)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigoMunicipal", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigoMunicipal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@municipio", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "municipio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codProvincia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codProvincia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codigoMunicipal", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigoMunicipal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_municipio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "municipio", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_municipio", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "municipio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_codProvincia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codProvincia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codProvincia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codProvincia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2524,7 +2654,7 @@ SELECT codigoMunicipal, municipio FROM Localidad WHERE (codigoMunicipal = @codig
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT codigoMunicipal, municipio FROM dbo.Localidad";
+            this._commandCollection[0].CommandText = "SELECT codigoMunicipal, municipio, codProvincia\r\nFROM     Localidad";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2585,7 +2715,7 @@ SELECT codigoMunicipal, municipio FROM Localidad WHERE (codigoMunicipal = @codig
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_codigoMunicipal, string Original_municipio) {
+        public virtual int Delete(string Original_codigoMunicipal, string Original_municipio, string Original_codProvincia) {
             if ((Original_codigoMunicipal == null)) {
                 throw new global::System.ArgumentNullException("Original_codigoMunicipal");
             }
@@ -2599,6 +2729,14 @@ SELECT codigoMunicipal, municipio FROM Localidad WHERE (codigoMunicipal = @codig
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_municipio));
+            }
+            if ((Original_codProvincia == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_codProvincia));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2620,7 +2758,7 @@ SELECT codigoMunicipal, municipio FROM Localidad WHERE (codigoMunicipal = @codig
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string codigoMunicipal, string municipio) {
+        public virtual int Insert(string codigoMunicipal, string municipio, string codProvincia) {
             if ((codigoMunicipal == null)) {
                 throw new global::System.ArgumentNullException("codigoMunicipal");
             }
@@ -2632,6 +2770,12 @@ SELECT codigoMunicipal, municipio FROM Localidad WHERE (codigoMunicipal = @codig
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(municipio));
+            }
+            if ((codProvincia == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(codProvincia));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2653,7 +2797,7 @@ SELECT codigoMunicipal, municipio FROM Localidad WHERE (codigoMunicipal = @codig
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string codigoMunicipal, string municipio, string Original_codigoMunicipal, string Original_municipio) {
+        public virtual int Update(string codigoMunicipal, string municipio, string codProvincia, string Original_codigoMunicipal, string Original_municipio, string Original_codProvincia) {
             if ((codigoMunicipal == null)) {
                 throw new global::System.ArgumentNullException("codigoMunicipal");
             }
@@ -2666,19 +2810,33 @@ SELECT codigoMunicipal, municipio FROM Localidad WHERE (codigoMunicipal = @codig
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(municipio));
             }
+            if ((codProvincia == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(codProvincia));
+            }
             if ((Original_codigoMunicipal == null)) {
                 throw new global::System.ArgumentNullException("Original_codigoMunicipal");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_codigoMunicipal));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_codigoMunicipal));
             }
             if ((Original_municipio == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_municipio));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_municipio));
+            }
+            if ((Original_codProvincia == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_codProvincia));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2700,8 +2858,8 @@ SELECT codigoMunicipal, municipio FROM Localidad WHERE (codigoMunicipal = @codig
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string municipio, string Original_codigoMunicipal, string Original_municipio) {
-            return this.Update(Original_codigoMunicipal, municipio, Original_codigoMunicipal, Original_municipio);
+        public virtual int Update(string municipio, string codProvincia, string Original_codigoMunicipal, string Original_municipio, string Original_codProvincia) {
+            return this.Update(Original_codigoMunicipal, municipio, codProvincia, Original_codigoMunicipal, Original_municipio, Original_codProvincia);
         }
     }
     
