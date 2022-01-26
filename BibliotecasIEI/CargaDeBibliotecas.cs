@@ -71,7 +71,23 @@ namespace BibliotecasIEI
             // TODO: esta línea de código carga datos en la tabla 'modelDataSet.Biblioteca' Puede moverla o quitarla según sea necesario.
             this.bibliotecaTableAdapter.Fill(this.modelDataSet.Biblioteca);
 
+           /* GMapOverlay markerOverlay = new GMapOverlay("Marcador");
+            gMapControl1.Overlays.Add(markerOverlay);
+            GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(43.368861, -2.70106), GMarkerGoogleType.green);
+            markerOverlay.Markers.Add(marker);
+
+            marker.ToolTipMode = MarkerTooltipMode.Always;
+            marker.ToolTipText = string.Format("prueba");*/
+
            
+
+            /*PointLatLng point = new PointLatLng(43.368861, -2.70106);
+            GMapMarker marker = new GMarkerGoogle(point, GMarkerGoogleType.green);
+
+            GMapOverlay markers = new GMapOverlay("marker");
+            markers.Markers.Add(marker);
+            gMapControl1.Overlays.Add(markers);*/
+
 
         }
 
@@ -100,6 +116,7 @@ namespace BibliotecasIEI
                 string CodesVizcaya = u.ReadToEnd();
                 var VizcayaCodes = JsonConvert.DeserializeObject<List<Class1>>(CodesVizcaya);
 
+                List<String> arrayLat = new List<String>();
 
                 for (int i = 0; i < eusList.Count; i++)
                 {
@@ -170,6 +187,19 @@ namespace BibliotecasIEI
                            eusList[i].documentDescription
                            );
 
+                        double longi = double.Parse(eusList[i].lonwgs84);
+                        double lat = double.Parse(eusList[i].latwgs84);
+                        
+                        System.Diagnostics.Debug.WriteLine(eusList[i].latwgs84 + "   " + lat / 1000000);
+
+                        GMapOverlay markerOverlay = new GMapOverlay("Marcador");
+                        gMapControl1.Overlays.Add(markerOverlay);
+                        GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(lat / 1000000, -longi / 10000000), GMarkerGoogleType.green);
+                        markerOverlay.Markers.Add(marker);
+
+                        marker.ToolTipMode = MarkerTooltipMode.Always;
+                        marker.ToolTipText = string.Format("prueba");
+
                         this.localidadTableAdapter.Insert(
                              codigo,
                              eusList[i].municipality
@@ -180,23 +210,16 @@ namespace BibliotecasIEI
                             eusList[i].territory
                             );
 
-                        double longi = Convert.ToDouble(eusList[i].lonwgs84);
-                        double lat = Convert.ToDouble(eusList[i].latwgs84);
-                        /* GMapOverlay markerOverlay = new GMapOverlay("Marcador");
-                         GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(43.368861, -2.70106), GMarkerGoogleType.green);
-                         markerOverlay.Markers.Add(marker);
+                                              
 
-                         marker.ToolTipMode = MarkerTooltipMode.Always;
-                         marker.ToolTipText = string.Format(eusList[i].address);
+                        // gMapControl1.Overlays.Add(markerOverlay);
 
-                         gMapControl1.Overlays.Add(markerOverlay);*/
-
-                        PointLatLng point = new PointLatLng(lat, longi);
+                        /*PointLatLng point = new PointLatLng(lat, longi);
                         GMapMarker marker = new GMarkerGoogle(point, GMarkerGoogleType.red_pushpin);
 
                         GMapOverlay markers = new GMapOverlay("marker");
                         markers.Markers.Add(marker);
-                        gMapControl1.Overlays.Add(markers);
+                        gMapControl1.Overlays.Add(markers);*/
 
                     }
                     catch (Exception err)
@@ -213,6 +236,8 @@ namespace BibliotecasIEI
 
                 }
                 System.Diagnostics.Debug.WriteLine("Funciona, hasta luego Manin ");
+
+                System.Diagnostics.Debug.WriteLine(arrayLat.Count);
 
             }
 
