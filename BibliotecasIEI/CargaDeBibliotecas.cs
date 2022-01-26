@@ -486,8 +486,8 @@ namespace BibliotecasIEI
             gMapControl1.MaxZoom = 24;
             gMapControl1.Zoom = 4;
             gMapControl1.AutoScroll = true;
-                
-           
+            
+            
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
