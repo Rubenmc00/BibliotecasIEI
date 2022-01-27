@@ -113,7 +113,7 @@ namespace BibliotecasIEI
             this.bibliotecaBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bibliotecaBindingNavigator.Name = "bibliotecaBindingNavigator";
             this.bibliotecaBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.bibliotecaBindingNavigator.Size = new System.Drawing.Size(1452, 27);
+            this.bibliotecaBindingNavigator.Size = new System.Drawing.Size(1028, 27);
             this.bibliotecaBindingNavigator.TabIndex = 0;
             this.bibliotecaBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -123,7 +123,7 @@ namespace BibliotecasIEI
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             // 
             // bibliotecaBindingSource
@@ -139,7 +139,7 @@ namespace BibliotecasIEI
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 24);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
@@ -149,7 +149,7 @@ namespace BibliotecasIEI
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // bindingNavigatorMoveFirstItem
@@ -158,7 +158,7 @@ namespace BibliotecasIEI
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
             // 
             // bindingNavigatorMovePreviousItem
@@ -167,7 +167,7 @@ namespace BibliotecasIEI
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
@@ -179,9 +179,8 @@ namespace BibliotecasIEI
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
@@ -196,7 +195,7 @@ namespace BibliotecasIEI
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
             // 
             // bindingNavigatorMoveLastItem
@@ -205,7 +204,7 @@ namespace BibliotecasIEI
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
@@ -218,16 +217,15 @@ namespace BibliotecasIEI
             this.bibliotecaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bibliotecaBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("bibliotecaBindingNavigatorSaveItem.Image")));
             this.bibliotecaBindingNavigatorSaveItem.Name = "bibliotecaBindingNavigatorSaveItem";
-            this.bibliotecaBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
+            this.bibliotecaBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.bibliotecaBindingNavigatorSaveItem.Text = "Guardar datos";
             this.bibliotecaBindingNavigatorSaveItem.Click += new System.EventHandler(this.bibliotecaBindingNavigatorSaveItem_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(678, 381);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(508, 310);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 28);
+            this.button1.Size = new System.Drawing.Size(109, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "Bibilioteca EUS";
             this.button1.UseVisualStyleBackColor = true;
@@ -235,10 +233,10 @@ namespace BibliotecasIEI
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(678, 424);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(508, 344);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 28);
+            this.button2.Size = new System.Drawing.Size(109, 23);
             this.button2.TabIndex = 3;
             this.button2.Text = "Biblioteca CAT";
             this.button2.UseVisualStyleBackColor = true;
@@ -246,10 +244,10 @@ namespace BibliotecasIEI
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(678, 467);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(508, 379);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(145, 28);
+            this.button3.Size = new System.Drawing.Size(109, 23);
             this.button3.TabIndex = 4;
             this.button3.Text = "Bibilioteca VAL";
             this.button3.UseVisualStyleBackColor = true;
@@ -257,10 +255,9 @@ namespace BibliotecasIEI
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(678, 526);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Location = new System.Drawing.Point(508, 427);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(145, 28);
+            this.button4.Size = new System.Drawing.Size(109, 23);
             this.button4.TabIndex = 7;
             this.button4.Text = "Borrar Campos";
             this.button4.UseVisualStyleBackColor = true;
@@ -274,11 +271,12 @@ namespace BibliotecasIEI
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewTextBoxColumn17});
             this.provinciaDataGridView.DataSource = this.provinciaBindingSource;
-            this.provinciaDataGridView.Location = new System.Drawing.Point(853, 356);
+            this.provinciaDataGridView.Location = new System.Drawing.Point(640, 289);
+            this.provinciaDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.provinciaDataGridView.Name = "provinciaDataGridView";
             this.provinciaDataGridView.RowHeadersWidth = 51;
             this.provinciaDataGridView.RowTemplate.Height = 24;
-            this.provinciaDataGridView.Size = new System.Drawing.Size(426, 220);
+            this.provinciaDataGridView.Size = new System.Drawing.Size(320, 179);
             this.provinciaDataGridView.TabIndex = 14;
             // 
             // dataGridViewTextBoxColumn14
@@ -343,11 +341,12 @@ namespace BibliotecasIEI
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn18});
             this.bibliotecaDataGridView.DataSource = this.bibliotecaBindingSource;
-            this.bibliotecaDataGridView.Location = new System.Drawing.Point(74, 41);
+            this.bibliotecaDataGridView.Location = new System.Drawing.Point(56, 33);
+            this.bibliotecaDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bibliotecaDataGridView.Name = "bibliotecaDataGridView";
             this.bibliotecaDataGridView.RowHeadersWidth = 51;
             this.bibliotecaDataGridView.RowTemplate.Height = 24;
-            this.bibliotecaDataGridView.Size = new System.Drawing.Size(1310, 272);
+            this.bibliotecaDataGridView.Size = new System.Drawing.Size(982, 221);
             this.bibliotecaDataGridView.TabIndex = 14;
             // 
             // dataGridViewTextBoxColumn1
@@ -439,11 +438,12 @@ namespace BibliotecasIEI
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn19});
             this.localidadDataGridView.DataSource = this.localidadBindingSource;
-            this.localidadDataGridView.Location = new System.Drawing.Point(139, 356);
+            this.localidadDataGridView.Location = new System.Drawing.Point(104, 289);
+            this.localidadDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.localidadDataGridView.Name = "localidadDataGridView";
             this.localidadDataGridView.RowHeadersWidth = 51;
             this.localidadDataGridView.RowTemplate.Height = 24;
-            this.localidadDataGridView.Size = new System.Drawing.Size(507, 220);
+            this.localidadDataGridView.Size = new System.Drawing.Size(380, 179);
             this.localidadDataGridView.TabIndex = 14;
             // 
             // dataGridViewTextBoxColumn10
@@ -472,9 +472,10 @@ namespace BibliotecasIEI
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(634, 627);
+            this.button6.Location = new System.Drawing.Point(476, 509);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(227, 61);
+            this.button6.Size = new System.Drawing.Size(170, 50);
             this.button6.TabIndex = 15;
             this.button6.Text = "Abrir Buscador de bibliotecas";
             this.button6.UseVisualStyleBackColor = true;
@@ -482,9 +483,9 @@ namespace BibliotecasIEI
             // 
             // CargaDeBibliotecas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1452, 717);
+            this.ClientSize = new System.Drawing.Size(1028, 583);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.localidadDataGridView);
             this.Controls.Add(this.bibliotecaDataGridView);
@@ -494,7 +495,6 @@ namespace BibliotecasIEI
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.bibliotecaBindingNavigator);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CargaDeBibliotecas";
             this.Text = "CargaDeBibliotecas";
             this.Load += new System.EventHandler(this.CargaDeBibliotecas_Load);

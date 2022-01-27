@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace BibliotecasIEI
 {
     partial class FormularioBusqueda
@@ -82,8 +84,7 @@ namespace BibliotecasIEI
             this.gMapControl1.GrayScaleMode = false;
             this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMapControl1.LevelsKeepInMemmory = 5;
-            this.gMapControl1.Location = new System.Drawing.Point(521, 120);
-            this.gMapControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.gMapControl1.Location = new System.Drawing.Point(391, 98);
             this.gMapControl1.MarkersEnabled = true;
             this.gMapControl1.MaxZoom = 2;
             this.gMapControl1.MinZoom = 2;
@@ -97,7 +98,7 @@ namespace BibliotecasIEI
             this.gMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMapControl1.ShowTileGridLines = false;
-            this.gMapControl1.Size = new System.Drawing.Size(517, 255);
+            this.gMapControl1.Size = new System.Drawing.Size(388, 207);
             this.gMapControl1.TabIndex = 12;
             this.gMapControl1.Zoom = 0D;
             // 
@@ -105,19 +106,22 @@ namespace BibliotecasIEI
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(201, 32);
+            this.label1.Location = new System.Drawing.Point(151, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(534, 55);
+            this.label1.Size = new System.Drawing.Size(423, 44);
             this.label1.TabIndex = 13;
             this.label1.Text = "Buscador de bibliotecas";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(76, 154);
+            this.label2.Location = new System.Drawing.Point(57, 125);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 25);
+            this.label2.Size = new System.Drawing.Size(81, 20);
             this.label2.TabIndex = 14;
             this.label2.Text = "Localidad:";
             // 
@@ -125,9 +129,10 @@ namespace BibliotecasIEI
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(76, 217);
+            this.label3.Location = new System.Drawing.Point(57, 176);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(171, 25);
+            this.label3.Size = new System.Drawing.Size(136, 20);
             this.label3.TabIndex = 15;
             this.label3.Text = "Tipo de biblioteca:";
             // 
@@ -137,23 +142,26 @@ namespace BibliotecasIEI
             this.tipoBiblioteca.Items.AddRange(new object[] {
             "Publica",
             "Privada"});
-            this.tipoBiblioteca.Location = new System.Drawing.Point(268, 221);
+            this.tipoBiblioteca.Location = new System.Drawing.Point(201, 180);
+            this.tipoBiblioteca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tipoBiblioteca.Name = "tipoBiblioteca";
-            this.tipoBiblioteca.Size = new System.Drawing.Size(154, 24);
+            this.tipoBiblioteca.Size = new System.Drawing.Size(116, 21);
             this.tipoBiblioteca.TabIndex = 16;
             // 
             // textoLocalidad
             // 
-            this.textoLocalidad.Location = new System.Drawing.Point(268, 158);
+            this.textoLocalidad.Location = new System.Drawing.Point(201, 128);
+            this.textoLocalidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textoLocalidad.Name = "textoLocalidad";
-            this.textoLocalidad.Size = new System.Drawing.Size(154, 22);
+            this.textoLocalidad.Size = new System.Drawing.Size(116, 20);
             this.textoLocalidad.TabIndex = 17;
             // 
             // botonBuscar
             // 
-            this.botonBuscar.Location = new System.Drawing.Point(79, 299);
+            this.botonBuscar.Location = new System.Drawing.Point(59, 243);
+            this.botonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonBuscar.Name = "botonBuscar";
-            this.botonBuscar.Size = new System.Drawing.Size(99, 34);
+            this.botonBuscar.Size = new System.Drawing.Size(74, 28);
             this.botonBuscar.TabIndex = 18;
             this.botonBuscar.Text = "Buscar";
             this.botonBuscar.UseVisualStyleBackColor = true;
@@ -161,9 +169,10 @@ namespace BibliotecasIEI
             // 
             // botonCancelar
             // 
-            this.botonCancelar.Location = new System.Drawing.Point(194, 299);
+            this.botonCancelar.Location = new System.Drawing.Point(146, 243);
+            this.botonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonCancelar.Name = "botonCancelar";
-            this.botonCancelar.Size = new System.Drawing.Size(99, 34);
+            this.botonCancelar.Size = new System.Drawing.Size(74, 28);
             this.botonCancelar.TabIndex = 19;
             this.botonCancelar.Text = "Cancelar";
             this.botonCancelar.UseVisualStyleBackColor = true;
@@ -181,9 +190,10 @@ namespace BibliotecasIEI
             // 
             this.resultadosLabel.AutoSize = true;
             this.resultadosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultadosLabel.Location = new System.Drawing.Point(79, 390);
+            this.resultadosLabel.Location = new System.Drawing.Point(59, 317);
+            this.resultadosLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.resultadosLabel.Name = "resultadosLabel";
-            this.resultadosLabel.Size = new System.Drawing.Size(234, 25);
+            this.resultadosLabel.Size = new System.Drawing.Size(191, 20);
             this.resultadosLabel.TabIndex = 20;
             this.resultadosLabel.Text = "Resultados de búsqueda:";
             // 
@@ -192,18 +202,19 @@ namespace BibliotecasIEI
             this.textoResultado.AllowDrop = true;
             this.textoResultado.AutoEllipsis = true;
             this.textoResultado.AutoSize = true;
-            this.textoResultado.Location = new System.Drawing.Point(81, 437);
+            this.textoResultado.Location = new System.Drawing.Point(61, 355);
+            this.textoResultado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.textoResultado.Name = "textoResultado";
-            this.textoResultado.Size = new System.Drawing.Size(325, 17);
+            this.textoResultado.Size = new System.Drawing.Size(242, 13);
             this.textoResultado.TabIndex = 21;
             this.textoResultado.Text = "Aquí se mostrarán los resultados de su búsqueda.";
             this.textoResultado.Click += new System.EventHandler(this.textoResultado_Click);
             // 
             // FormularioBusqueda
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1112, 720);
+            this.ClientSize = new System.Drawing.Size(834, 585);
             this.Controls.Add(this.textoResultado);
             this.Controls.Add(this.resultadosLabel);
             this.Controls.Add(this.botonCancelar);
@@ -214,6 +225,7 @@ namespace BibliotecasIEI
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gMapControl1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormularioBusqueda";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormularioBusqueda_Load);
@@ -223,6 +235,16 @@ namespace BibliotecasIEI
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void textoResultado_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
