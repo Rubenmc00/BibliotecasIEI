@@ -64,12 +64,13 @@ namespace BibliotecasIEI
                     if (row.ItemArray[7].ToString().Equals(tipoBiblioteca.SelectedItem.ToString())) {
                         double longi = double.Parse(row.ItemArray[5].ToString().Replace(".", ","));
                         double lat = double.Parse(row.ItemArray[6].ToString().Replace(".", ","));
+                        gMapControl1.Overlays.Add(markers);
                         GMapMarker marker = new GMarkerGoogle(
                            new PointLatLng(lat, longi),
                            GMarkerGoogleType.blue_pushpin);
                         gMapControl1.Position = new PointLatLng(lat, longi);
                         markers.Markers.Add(marker);
-                        gMapControl1.Overlays.Add(markers);
+                        
                         marker.ToolTipMode = MarkerTooltipMode.Always;
                         marker.ToolTipText = string.Format(row.ItemArray[0].ToString());
                 
