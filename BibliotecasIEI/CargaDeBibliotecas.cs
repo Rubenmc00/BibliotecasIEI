@@ -308,9 +308,13 @@ namespace BibliotecasIEI
 
                     System.Diagnostics.Debug.WriteLine(CV[i].COD_MUNICIPIO);
 
+                    String telf = CV[i].TELEFONO.Substring(6);
+
+                   
+
                     this.bibliotecaTableAdapter.Insert(
                        CV[i].NOMBRE,
-                       CV[i].TELEFONO,
+                       telf,
                        CV[i].EMAIL,
                        CV[i].DIRECCION,
                        CV[i].CP,
