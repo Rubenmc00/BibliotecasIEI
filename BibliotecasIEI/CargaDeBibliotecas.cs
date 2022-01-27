@@ -278,7 +278,7 @@ namespace BibliotecasIEI
             {
                 try
                 {
-                   /* String path = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\ºIDE\\geckodriver.exe";
+                   String path = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\ºIDE\\geckodriver.exe";
                     System.Environment.SetEnvironmentVariable("webdriver.gecko.driver", path);
                     IWebDriver driver = new ChromeDriver();
                     driver.Url = "https://www.coordenadas-gps.com/";
@@ -306,7 +306,7 @@ namespace BibliotecasIEI
                     Thread.Sleep(1000);
                     driver.Quit();
 
-                    System.Diagnostics.Debug.WriteLine(CV[i].COD_MUNICIPIO);*/
+                    System.Diagnostics.Debug.WriteLine(CV[i].COD_MUNICIPIO);
 
                     String telf = CV[i].TELEFONO.Substring(6);
 
@@ -318,8 +318,8 @@ namespace BibliotecasIEI
                        CV[i].EMAIL,
                        CV[i].DIRECCION,
                        CV[i].CP,
-                       telf,
-                       telf,
+                       longi,
+                       lat,
                        CV[i].TIPO,
                        CV[i].DES_CARACTER,
                         CV[i].COD_MUNICIPIO
