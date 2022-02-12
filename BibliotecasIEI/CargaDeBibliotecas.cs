@@ -10,8 +10,8 @@ using OpenQA.Selenium;
 using System.Threading;
 using System.Data.SqlClient;
 using GMap.NET.WindowsForms;
-
-
+using System.Net;
+using System.Net.Http;
 
 namespace BibliotecasIEI
 {
@@ -49,9 +49,37 @@ namespace BibliotecasIEI
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private async void button1_Click_1(object sender, EventArgs e)
         {
 
+
+            //System.Diagnostics.Process.Start("https://localhost:44353/");
+
+
+
+
+            using (HttpClient client = new HttpClient())
+            {
+                var response = await client.GetAsync("http://localhost:63554/carga");
+                response.EnsureSuccessStatusCode();
+                if (response.IsSuccessStatusCode)
+                {
+                    string message = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine(message);
+                    
+                   
+
+                }
+                else
+                {
+                    Console.WriteLine($"response error code: {response.StatusCode}");
+                }
+            }
+
+                Console.ReadLine();
+           
+            
+            /*
             var eusList = obtenerBibliotecasEUS();
 
             StreamReader t = new StreamReader("Archivos/AlavaCodes.json");
@@ -162,13 +190,8 @@ namespace BibliotecasIEI
                 }
                 System.Diagnostics.Debug.WriteLine("Funciona, hasta luego Manin ");
 
-            }
-
-
-
-
+            }*/
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -270,9 +293,31 @@ namespace BibliotecasIEI
             var eusList = JsonConvert.DeserializeObject<List<BibliotecaEUS>>(eusJson);
             return eusList;
         }
-        private void button3_Click(object sender, EventArgs e)
+        private async void button3_Click(object sender, EventArgs e)
         {
-            var CV = obtenerBibliotecasVAL();
+            Console.WriteLine("press any key cont...");
+            Console.ReadLine();
+
+            using (HttpClient client = new HttpClient())
+            {
+                var response = await client.GetAsync("http://localhost:63554/VAL");
+                response.EnsureSuccessStatusCode();
+                if (response.IsSuccessStatusCode)
+                {
+                    string message = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine(message);
+                }
+                else
+                {
+                    Console.WriteLine($"response error code: {response.StatusCode}");
+                }
+            }
+
+            Console.ReadLine();
+
+
+
+            /*var CV = obtenerBibliotecasVAL();
 
             for (int i = 0; i < CV.Count; i++)
             {
@@ -348,7 +393,7 @@ namespace BibliotecasIEI
                     this.localidadTableAdapter.Fill(this.modelDataSet.Localidad);
                 }
                 System.Diagnostics.Debug.WriteLine("Funciona, hasta luego Manin ");
-            }
+            }*/
         }
 
         private void button4_Click(object sender, EventArgs e)

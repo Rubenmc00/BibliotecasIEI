@@ -1,0 +1,882 @@
+[
+  {
+    "CPRO": "20",
+    "CMUN": "001",
+    "DC": "3",
+    "NOMBRE": "Abaltzisketa",
+    "dc": "3",
+    "nombre": "Abaltzisketa",
+    "cpro": "20",
+    "cmun": "001"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "002",
+    "DC": "8",
+    "NOMBRE": "Aduna",
+    "dc": "8",
+    "nombre": "Aduna",
+    "cpro": "20",
+    "cmun": "002"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "016",
+    "DC": "3",
+    "NOMBRE": "Aia",
+    "dc": "3",
+    "nombre": "Aia",
+    "cpro": "20",
+    "cmun": "016"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "003",
+    "DC": "4",
+    "NOMBRE": "Aizarnazabal",
+    "dc": "4",
+    "nombre": "Aizarnazabal",
+    "cpro": "20",
+    "cmun": "003"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "004",
+    "DC": "9",
+    "NOMBRE": "Albiztur",
+    "dc": "9",
+    "nombre": "Albiztur",
+    "cpro": "20",
+    "cmun": "004"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "005",
+    "DC": "2",
+    "NOMBRE": "Alegia",
+    "dc": "2",
+    "nombre": "Alegia",
+    "cpro": "20",
+    "cmun": "005"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "006",
+    "DC": "5",
+    "NOMBRE": "Alkiza",
+    "dc": "5",
+    "nombre": "Alkiza",
+    "cpro": "20",
+    "cmun": "006"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "906",
+    "DC": "6",
+    "NOMBRE": "Altzaga",
+    "dc": "6",
+    "nombre": "Altzaga",
+    "cpro": "20",
+    "cmun": "906"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "007",
+    "DC": "1",
+    "NOMBRE": "Altzo",
+    "dc": "1",
+    "nombre": "Altzo",
+    "cpro": "20",
+    "cmun": "007"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "008",
+    "DC": "7",
+    "NOMBRE": "Amezketa",
+    "dc": "7",
+    "nombre": "Amezketa",
+    "cpro": "20",
+    "cmun": "008"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "009",
+    "DC": "0",
+    "NOMBRE": "Andoain",
+    "dc": "0",
+    "nombre": "Andoain",
+    "cpro": "20",
+    "cmun": "009"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "010",
+    "DC": "4",
+    "NOMBRE": "Anoeta",
+    "dc": "4",
+    "nombre": "Anoeta",
+    "cpro": "20",
+    "cmun": "010"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "011",
+    "DC": "1",
+    "NOMBRE": "Antzuola",
+    "dc": "1",
+    "nombre": "Antzuola",
+    "cpro": "20",
+    "cmun": "011"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "012",
+    "DC": "6",
+    "NOMBRE": "Arama",
+    "dc": "6",
+    "nombre": "Arama",
+    "cpro": "20",
+    "cmun": "012"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "013",
+    "DC": "2",
+    "NOMBRE": "Aretxabaleta",
+    "dc": "2",
+    "nombre": "Aretxabaleta",
+    "cpro": "20",
+    "cmun": "013"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "055",
+    "DC": "1",
+    "NOMBRE": "Arrasate/Mondragón",
+    "dc": "1",
+    "nombre": "Arrasate/Mondragón",
+    "cpro": "20",
+    "cmun": "055"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "014",
+    "DC": "7",
+    "NOMBRE": "Asteasu",
+    "dc": "7",
+    "nombre": "Asteasu",
+    "cpro": "20",
+    "cmun": "014"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "903",
+    "DC": "5",
+    "NOMBRE": "Astigarraga",
+    "dc": "5",
+    "nombre": "Astigarraga",
+    "cpro": "20",
+    "cmun": "903"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "015",
+    "DC": "0",
+    "NOMBRE": "Ataun",
+    "dc": "0",
+    "nombre": "Ataun",
+    "cpro": "20",
+    "cmun": "015"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "017",
+    "DC": "9",
+    "NOMBRE": "Azkoitia",
+    "dc": "9",
+    "nombre": "Azkoitia",
+    "cpro": "20",
+    "cmun": "017"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "018",
+    "DC": "5",
+    "NOMBRE": "Azpeitia",
+    "dc": "5",
+    "nombre": "Azpeitia",
+    "cpro": "20",
+    "cmun": "018"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "904",
+    "DC": "0",
+    "NOMBRE": "Baliarrain",
+    "dc": "0",
+    "nombre": "Baliarrain",
+    "cpro": "20",
+    "cmun": "904"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "019",
+    "DC": "8",
+    "NOMBRE": "Beasain",
+    "dc": "8",
+    "nombre": "Beasain",
+    "cpro": "20",
+    "cmun": "019"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "020",
+    "DC": "2",
+    "NOMBRE": "Beizama",
+    "dc": "2",
+    "nombre": "Beizama",
+    "cpro": "20",
+    "cmun": "020"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "021",
+    "DC": "9",
+    "NOMBRE": "Belauntza",
+    "dc": "9",
+    "nombre": "Belauntza",
+    "cpro": "20",
+    "cmun": "021"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "022",
+    "DC": "4",
+    "NOMBRE": "Berastegi",
+    "dc": "4",
+    "nombre": "Berastegi",
+    "cpro": "20",
+    "cmun": "022"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "074",
+    "DC": "4",
+    "NOMBRE": "Bergara",
+    "dc": "4",
+    "nombre": "Bergara",
+    "cpro": "20",
+    "cmun": "074"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "023",
+    "DC": "0",
+    "NOMBRE": "Berrobi",
+    "dc": "0",
+    "nombre": "Berrobi",
+    "cpro": "20",
+    "cmun": "023"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "024",
+    "DC": "5",
+    "NOMBRE": "Bidegoian",
+    "dc": "5",
+    "nombre": "Bidegoian",
+    "cpro": "20",
+    "cmun": "024"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "029",
+    "DC": "6",
+    "NOMBRE": "Deba",
+    "dc": "6",
+    "nombre": "Deba",
+    "cpro": "20",
+    "cmun": "029"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "069",
+    "DC": "7",
+    "NOMBRE": "Donostia-San Sebastián",
+    "dc": "7",
+    "nombre": "Donostia-San Sebastián",
+    "cpro": "20",
+    "cmun": "069"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "030",
+    "DC": "0",
+    "NOMBRE": "Eibar",
+    "dc": "0",
+    "nombre": "Eibar",
+    "cpro": "20",
+    "cmun": "030"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "031",
+    "DC": "7",
+    "NOMBRE": "Elduain",
+    "dc": "7",
+    "nombre": "Elduain",
+    "cpro": "20",
+    "cmun": "031"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "033",
+    "DC": "8",
+    "NOMBRE": "Elgeta",
+    "dc": "8",
+    "nombre": "Elgeta",
+    "cpro": "20",
+    "cmun": "033"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "032",
+    "DC": "2",
+    "NOMBRE": "Elgoibar",
+    "dc": "2",
+    "nombre": "Elgoibar",
+    "cpro": "20",
+    "cmun": "032"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "067",
+    "DC": "8",
+    "NOMBRE": "Errenteria",
+    "dc": "8",
+    "nombre": "Errenteria",
+    "cpro": "20",
+    "cmun": "067"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "066",
+    "DC": "2",
+    "NOMBRE": "Errezil",
+    "dc": "2",
+    "nombre": "Errezil",
+    "cpro": "20",
+    "cmun": "066"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "034",
+    "DC": "3",
+    "NOMBRE": "Eskoriatza",
+    "dc": "3",
+    "nombre": "Eskoriatza",
+    "cpro": "20",
+    "cmun": "034"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "035",
+    "DC": "6",
+    "NOMBRE": "Ezkio-Itsaso",
+    "dc": "6",
+    "nombre": "Ezkio-Itsaso",
+    "cpro": "20",
+    "cmun": "035"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "038",
+    "DC": "1",
+    "NOMBRE": "Gabiria",
+    "dc": "1",
+    "nombre": "Gabiria",
+    "cpro": "20",
+    "cmun": "038"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "037",
+    "DC": "5",
+    "NOMBRE": "Gaintza",
+    "dc": "5",
+    "nombre": "Gaintza",
+    "cpro": "20",
+    "cmun": "037"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "907",
+    "DC": "2",
+    "NOMBRE": "Gaztelu",
+    "dc": "2",
+    "nombre": "Gaztelu",
+    "cpro": "20",
+    "cmun": "907"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "039",
+    "DC": "4",
+    "NOMBRE": "Getaria",
+    "dc": "4",
+    "nombre": "Getaria",
+    "cpro": "20",
+    "cmun": "039"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "040",
+    "DC": "8",
+    "NOMBRE": "Hernani",
+    "dc": "8",
+    "nombre": "Hernani",
+    "cpro": "20",
+    "cmun": "040"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "041",
+    "DC": "5",
+    "NOMBRE": "Hernialde",
+    "dc": "5",
+    "nombre": "Hernialde",
+    "cpro": "20",
+    "cmun": "041"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "036",
+    "DC": "9",
+    "NOMBRE": "Hondarribia",
+    "dc": "9",
+    "nombre": "Hondarribia",
+    "cpro": "20",
+    "cmun": "036"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "042",
+    "DC": "0",
+    "NOMBRE": "Ibarra",
+    "dc": "0",
+    "nombre": "Ibarra",
+    "cpro": "20",
+    "cmun": "042"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "043",
+    "DC": "6",
+    "NOMBRE": "Idiazabal",
+    "dc": "6",
+    "nombre": "Idiazabal",
+    "cpro": "20",
+    "cmun": "043"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "044",
+    "DC": "1",
+    "NOMBRE": "Ikaztegieta",
+    "dc": "1",
+    "nombre": "Ikaztegieta",
+    "cpro": "20",
+    "cmun": "044"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "045",
+    "DC": "4",
+    "NOMBRE": "Irun",
+    "dc": "4",
+    "nombre": "Irun",
+    "cpro": "20",
+    "cmun": "045"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "046",
+    "DC": "7",
+    "NOMBRE": "Irura",
+    "dc": "7",
+    "nombre": "Irura",
+    "cpro": "20",
+    "cmun": "046"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "047",
+    "DC": "3",
+    "NOMBRE": "Itsasondo",
+    "dc": "3",
+    "nombre": "Itsasondo",
+    "cpro": "20",
+    "cmun": "047"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "048",
+    "DC": "9",
+    "NOMBRE": "Larraul",
+    "dc": "9",
+    "nombre": "Larraul",
+    "cpro": "20",
+    "cmun": "048"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "902",
+    "DC": "9",
+    "NOMBRE": "Lasarte-Oria",
+    "dc": "9",
+    "nombre": "Lasarte-Oria",
+    "cpro": "20",
+    "cmun": "902"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "049",
+    "DC": "2",
+    "NOMBRE": "Lazkao",
+    "dc": "2",
+    "nombre": "Lazkao",
+    "cpro": "20",
+    "cmun": "049"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "050",
+    "DC": "5",
+    "NOMBRE": "Leaburu",
+    "dc": "5",
+    "nombre": "Leaburu",
+    "cpro": "20",
+    "cmun": "050"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "051",
+    "DC": "2",
+    "NOMBRE": "Legazpi",
+    "dc": "2",
+    "nombre": "Legazpi",
+    "cpro": "20",
+    "cmun": "051"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "052",
+    "DC": "7",
+    "NOMBRE": "Legorreta",
+    "dc": "7",
+    "nombre": "Legorreta",
+    "cpro": "20",
+    "cmun": "052"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "068",
+    "DC": "4",
+    "NOMBRE": "Leintz-Gatzaga",
+    "dc": "4",
+    "nombre": "Leintz-Gatzaga",
+    "cpro": "20",
+    "cmun": "068"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "053",
+    "DC": "3",
+    "NOMBRE": "Lezo",
+    "dc": "3",
+    "nombre": "Lezo",
+    "cpro": "20",
+    "cmun": "053"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "054",
+    "DC": "8",
+    "NOMBRE": "Lizartza",
+    "dc": "8",
+    "nombre": "Lizartza",
+    "cpro": "20",
+    "cmun": "054"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "901",
+    "DC": "4",
+    "NOMBRE": "Mendaro",
+    "dc": "4",
+    "nombre": "Mendaro",
+    "cpro": "20",
+    "cmun": "901"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "057",
+    "DC": "0",
+    "NOMBRE": "Mutiloa",
+    "dc": "0",
+    "nombre": "Mutiloa",
+    "cpro": "20",
+    "cmun": "057"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "056",
+    "DC": "4",
+    "NOMBRE": "Mutriku",
+    "dc": "4",
+    "nombre": "Mutriku",
+    "cpro": "20",
+    "cmun": "056"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "063",
+    "DC": "1",
+    "NOMBRE": "Oiartzun",
+    "dc": "1",
+    "nombre": "Oiartzun",
+    "cpro": "20",
+    "cmun": "063"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "058",
+    "DC": "6",
+    "NOMBRE": "Olaberria",
+    "dc": "6",
+    "nombre": "Olaberria",
+    "cpro": "20",
+    "cmun": "058"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "059",
+    "DC": "9",
+    "NOMBRE": "Oñati",
+    "dc": "9",
+    "nombre": "Oñati",
+    "cpro": "20",
+    "cmun": "059"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "076",
+    "DC": "0",
+    "NOMBRE": "Ordizia",
+    "dc": "0",
+    "nombre": "Ordizia",
+    "cpro": "20",
+    "cmun": "076"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "905",
+    "DC": "3",
+    "NOMBRE": "Orendain",
+    "dc": "3",
+    "nombre": "Orendain",
+    "cpro": "20",
+    "cmun": "905"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "060",
+    "DC": "3",
+    "NOMBRE": "Orexa",
+    "dc": "3",
+    "nombre": "Orexa",
+    "cpro": "20",
+    "cmun": "060"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "061",
+    "DC": "0",
+    "NOMBRE": "Orio",
+    "dc": "0",
+    "nombre": "Orio",
+    "cpro": "20",
+    "cmun": "061"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "062",
+    "DC": "5",
+    "NOMBRE": "Ormaiztegi",
+    "dc": "5",
+    "nombre": "Ormaiztegi",
+    "cpro": "20",
+    "cmun": "062"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "064",
+    "DC": "6",
+    "NOMBRE": "Pasaia",
+    "dc": "6",
+    "nombre": "Pasaia",
+    "cpro": "20",
+    "cmun": "064"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "070",
+    "DC": "1",
+    "NOMBRE": "Segura",
+    "dc": "1",
+    "nombre": "Segura",
+    "cpro": "20",
+    "cmun": "070"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "065",
+    "DC": "9",
+    "NOMBRE": "Soraluze/Placencia de las Armas",
+    "dc": "9",
+    "nombre": "Soraluze/Placencia de las Armas",
+    "cpro": "20",
+    "cmun": "065"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "071",
+    "DC": "8",
+    "NOMBRE": "Tolosa",
+    "dc": "8",
+    "nombre": "Tolosa",
+    "cpro": "20",
+    "cmun": "071"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "072",
+    "DC": "3",
+    "NOMBRE": "Urnieta",
+    "dc": "3",
+    "nombre": "Urnieta",
+    "cpro": "20",
+    "cmun": "072"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "077",
+    "DC": "6",
+    "NOMBRE": "Urretxu",
+    "dc": "6",
+    "nombre": "Urretxu",
+    "cpro": "20",
+    "cmun": "077"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "073",
+    "DC": "9",
+    "NOMBRE": "Usurbil",
+    "dc": "9",
+    "nombre": "Usurbil",
+    "cpro": "20",
+    "cmun": "073"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "075",
+    "DC": "7",
+    "NOMBRE": "Villabona",
+    "dc": "7",
+    "nombre": "Villabona",
+    "cpro": "20",
+    "cmun": "075"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "078",
+    "DC": "2",
+    "NOMBRE": "Zaldibia",
+    "dc": "2",
+    "nombre": "Zaldibia",
+    "cpro": "20",
+    "cmun": "078"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "079",
+    "DC": "5",
+    "NOMBRE": "Zarautz",
+    "dc": "5",
+    "nombre": "Zarautz",
+    "cpro": "20",
+    "cmun": "079"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "025",
+    "DC": "8",
+    "NOMBRE": "Zegama",
+    "dc": "8",
+    "nombre": "Zegama",
+    "cpro": "20",
+    "cmun": "025"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "026",
+    "DC": "1",
+    "NOMBRE": "Zerain",
+    "dc": "1",
+    "nombre": "Zerain",
+    "cpro": "20",
+    "cmun": "026"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "027",
+    "DC": "7",
+    "NOMBRE": "Zestoa",
+    "dc": "7",
+    "nombre": "Zestoa",
+    "cpro": "20",
+    "cmun": "027"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "028",
+    "DC": "3",
+    "NOMBRE": "Zizurkil",
+    "dc": "3",
+    "nombre": "Zizurkil",
+    "cpro": "20",
+    "cmun": "028"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "081",
+    "DC": "6",
+    "NOMBRE": "Zumaia",
+    "dc": "6",
+    "nombre": "Zumaia",
+    "cpro": "20",
+    "cmun": "081"
+  },
+  {
+    "CPRO": "20",
+    "CMUN": "080",
+    "DC": "9",
+    "NOMBRE": "Zumarraga",
+    "dc": "9",
+    "nombre": "Zumarraga",
+    "cpro": "20",
+    "cmun": "080"
+  }
+]
