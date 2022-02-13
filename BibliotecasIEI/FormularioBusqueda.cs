@@ -2,8 +2,11 @@
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
+using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Net.Http;
 using System.Windows.Forms;
 
 namespace BibliotecasIEI
@@ -43,10 +46,30 @@ namespace BibliotecasIEI
         }
 
 
-        private void botonBuscar_Click(object sender, EventArgs e)
+        private async void botonBuscar_Click(object sender, EventArgs e)
         {
-            markers.Clear();
+            markers.Clear();/*
+            using (HttpClient client = new HttpClient())
+            {
+                                
+                var response = await client.GetAsync("http://localhost:63554/Busqueda");
+                response.EnsureSuccessStatusCode();
+                if (response.IsSuccessStatusCode)
+                {
+                    string message = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine(message);
 
+                    this.bibliotecaTableAdapter.Fill(this.modelDataSet.Biblioteca);
+                    //this.provinciaTableAdapter.Fill(this.modelDataSet.Provincia);
+                    this.localidadTableAdapter.Fill(this.modelDataSet.Localidad);
+
+                }
+                else
+                {
+                    Console.WriteLine($"response error code: {response.StatusCode}");
+                }
+            }*/
+            
             String codMun = "";
             textoResultado.Text = "";
 

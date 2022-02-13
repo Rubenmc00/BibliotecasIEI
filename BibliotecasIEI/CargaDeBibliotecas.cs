@@ -5,13 +5,13 @@ using System.IO;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.Xml;
-using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using System.Threading;
 using System.Data.SqlClient;
 using GMap.NET.WindowsForms;
 using System.Net;
 using System.Net.Http;
+using OpenQA.Selenium.Chrome;
 
 namespace BibliotecasIEI
 {
@@ -56,18 +56,18 @@ namespace BibliotecasIEI
             //System.Diagnostics.Process.Start("https://localhost:44353/");
 
 
-
-
             using (HttpClient client = new HttpClient())
             {
-                var response = await client.GetAsync("http://localhost:63554/carga");
+                var response = await client.GetAsync("http://localhost:63554/carga/EXTR1");
                 response.EnsureSuccessStatusCode();
                 if (response.IsSuccessStatusCode)
                 {
                     string message = await response.Content.ReadAsStringAsync();
                     Console.WriteLine(message);
-                    
-                   
+
+                    this.bibliotecaTableAdapter.Fill(this.modelDataSet.Biblioteca);
+                    this.provinciaTableAdapter.Fill(this.modelDataSet.Provincia);
+                    this.localidadTableAdapter.Fill(this.modelDataSet.Localidad);
 
                 }
                 else
@@ -78,8 +78,8 @@ namespace BibliotecasIEI
 
                 Console.ReadLine();
            
-            
             /*
+            
             var eusList = obtenerBibliotecasEUS();
 
             StreamReader t = new StreamReader("Archivos/AlavaCodes.json");
@@ -192,9 +192,29 @@ namespace BibliotecasIEI
 
             }*/
         }
-        private void button2_Click(object sender, EventArgs e)
+        private async void button2_Click(object sender, EventArgs e)
         {
+            
+            using (HttpClient client = new HttpClient())
+            {
+                var response = await client.GetAsync("http://localhost:63554/carga/EXTR2");
+                response.EnsureSuccessStatusCode();
+                if (response.IsSuccessStatusCode)
+                {
+                    string message = await response.Content.ReadAsStringAsync();
+                    //Console.WriteLine(message);
 
+                    this.bibliotecaTableAdapter.Fill(this.modelDataSet.Biblioteca);
+                    this.provinciaTableAdapter.Fill(this.modelDataSet.Provincia);
+                    this.localidadTableAdapter.Fill(this.modelDataSet.Localidad);
+
+                }
+                else
+                {
+                    Console.WriteLine($"response error code: {response.StatusCode}");
+                }
+            }
+            /*
             var catList = obtenerBibliotecasCAT();
 
             for (int i = 0; i < catList.Count; i++)
@@ -249,7 +269,7 @@ namespace BibliotecasIEI
                     this.provinciaTableAdapter.Fill(this.modelDataSet.Provincia);
                     this.localidadTableAdapter.Fill(this.modelDataSet.Localidad);
                 }
-            }
+            }*/
         }
 
         private List<BibliotecaVAL> obtenerBibliotecasVAL()
@@ -295,17 +315,21 @@ namespace BibliotecasIEI
         }
         private async void button3_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("press any key cont...");
-            Console.ReadLine();
-
+            
+            
             using (HttpClient client = new HttpClient())
             {
-                var response = await client.GetAsync("http://localhost:63554/VAL");
+                var response = await client.GetAsync("http://localhost:63554/carga/EXTR3");
                 response.EnsureSuccessStatusCode();
                 if (response.IsSuccessStatusCode)
                 {
                     string message = await response.Content.ReadAsStringAsync();
                     Console.WriteLine(message);
+
+                    this.bibliotecaTableAdapter.Fill(this.modelDataSet.Biblioteca);
+                    this.provinciaTableAdapter.Fill(this.modelDataSet.Provincia);
+                    this.localidadTableAdapter.Fill(this.modelDataSet.Localidad);
+
                 }
                 else
                 {
@@ -313,11 +337,11 @@ namespace BibliotecasIEI
                 }
             }
 
-            Console.ReadLine();
+            
 
 
-
-            /*var CV = obtenerBibliotecasVAL();
+            /*
+            var CV = obtenerBibliotecasVAL();
 
             for (int i = 0; i < CV.Count; i++)
             {
